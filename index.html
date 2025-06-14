@@ -1,0 +1,166 @@
+<!-- Folder: /hrms-leave-system/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMS - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-calendar-alt"></i>
+                <h1>HRMS Leave</h1>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-item active">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="applyLeave.html" class="nav-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Apply Leave</span>
+                </a>
+                <a href="leaveHistory.html" class="nav-item">
+                    <i class="fas fa-history"></i>
+                    <span>Leave History</span>
+                </a>
+                <a href="approval.html" class="nav-item" id="approval-link">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Approvals</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="header">
+                <div></div> <!-- Empty div for spacing -->
+                
+                <div class="user-section">
+                    <div class="user-info">
+                        <div class="name">Chetan Solanki</div>
+                        <div class="role" id="user-role">Employee</div>
+                    </div>
+                    <div class="logout-dropdown">
+                        <div class="avatar">JS</div>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-user"></i> Profile</a>
+                            <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content">
+                <!-- Dashboard Page -->
+                <section id="dashboard-page" class="page fade-in">
+                    <div class="page-title">
+                        <h2>Dashboard</h2>
+                        <a href="applyLeave.html" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Apply Leave
+                        </a>
+                    </div>
+                    
+                    <div class="stats-container">
+                        <div class="stat-card total">
+                            <h3>Total Leaves</h3>
+                            <div class="stat-value">12</div>
+                            <div class="stat-detail">Allocated: 20 days per year</div>
+                        </div>
+                        
+                        <div class="stat-card pending">
+                            <h3>Pending Leaves</h3>
+                            <div class="stat-value">2</div>
+                            <div class="stat-detail">Awaiting manager approval</div>
+                        </div>
+                        
+                        <div class="stat-card approved">
+                            <h3>Approved Leaves</h3>
+                            <div class="stat-value">8</div>
+                            <div class="stat-detail">Successfully approved leaves</div>
+                        </div>
+                        
+                        <div class="stat-card rejected">
+                            <h3>Rejected Leaves</h3>
+                            <div class="stat-value">2</div>
+                            <div class="stat-detail">Rejected leave requests</div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>Recent Leave Requests</h3>
+                            <div class="actions">
+                                <select>
+                                    <option>All Employees</option>
+                                    <option>My Team</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Employee</th>
+                                    <th>Leave Type</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Duration</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Casual</td>
+                                    <td>2025-06-01</td>
+                                    <td>2025-06-05</td>
+                                    <td>5 days</td>
+                                    <td><span class="status status-approved">Approved</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Jane Smith</td>
+                                    <td>Medical</td>
+                                    <td>2025-06-10</td>
+                                    <td>2025-06-12</td>
+                                    <td>3 days</td>
+                                    <td><span class="status status-pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Johnson</td>
+                                    <td>Vacation</td>
+                                    <td>2025-06-15</td>
+                                    <td>2025-06-22</td>
+                                    <td>7 days</td>
+                                    <td><span class="status status-pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Sarah Williams</td>
+                                    <td>Personal</td>
+                                    <td>2025-07-01</td>
+                                    <td>2025-07-01</td>
+                                    <td>1 day</td>
+                                    <td><span class="status status-approved">Approved</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            
+            <footer class="footer">
+                <p>HRMS Leave Management System &copy; 2025. All rights reserved.</p>
+                <p>Project Duration: 15 May 2025 – 15 June 2025</p>
+            </footer>
+        </div>
+    </div>
+    
+    <script src="employee.js"></script>
+</body>
+</html>

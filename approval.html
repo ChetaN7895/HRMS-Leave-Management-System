@@ -1,0 +1,165 @@
+<!-- Folder: /hrms-leave-system/approval.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMS - Leave Approvals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-calendar-alt"></i>
+                <h1>HRMS Leave</h1>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="applyLeave.html" class="nav-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Apply Leave</span>
+                </a>
+                <a href="leaveHistory.html" class="nav-item">
+                    <i class="fas fa-history"></i>
+                    <span>Leave History</span>
+                </a>
+                <a href="approval.html" class="nav-item active" id="approval-link">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Approvals</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="header">
+                <div></div> <!-- Empty div for spacing -->
+                
+                <div class="user-section">
+                    <div class="user-info">
+                        <div class="name">Manager Name</div>
+                        <div class="role" id="user-role">Manager</div>
+                    </div>
+                    <div class="logout-dropdown">
+                        <div class="avatar">MN</div>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-user"></i> Profile</a>
+                            <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content">
+                <!-- Approval Page -->
+                <section id="approval-page" class="page fade-in">
+                    <div class="page-title">
+                        <h2>Leave Approvals</h2>
+                        <div class="actions">
+                            <button class="btn btn-outline">
+                                <i class="fas fa-filter"></i> Filter
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>Pending Approvals</h3>
+                            <div class="actions">
+                                <select id="approval-filter">
+                                    <option value="all">All Employees</option>
+                                    <option value="team">My Team</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Employee</th>
+                                    <th>Leave Type</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Duration</th>
+                                    <th>Reason</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="approvals-table-body">
+                                <tr>
+                                    <td>Jane Smith</td>
+                                    <td>Medical</td>
+                                    <td>2025-06-10</td>
+                                    <td>2025-06-12</td>
+                                    <td>3 days</td>
+                                    <td>Dental appointment</td>
+                                    <td class="action-cell">
+                                        <button class="btn btn-success approve-btn" data-id="1">
+                                            <i class="fas fa-check"></i> Approve
+                                        </button>
+                                        <button class="btn btn-danger reject-btn" data-id="1">
+                                            <i class="fas fa-times"></i> Reject
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Johnson</td>
+                                    <td>Vacation</td>
+                                    <td>2025-06-15</td>
+                                    <td>2025-06-22</td>
+                                    <td>7 days</td>
+                                    <td>Family vacation</td>
+                                    <td class="action-cell">
+                                        <button class="btn btn-success approve-btn" data-id="2">
+                                            <i class="fas fa-check"></i> Approve
+                                        </button>
+                                        <button class="btn btn-danger reject-btn" data-id="2">
+                                            <i class="fas fa-times"></i> Reject
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Michael Chen</td>
+                                    <td>Personal</td>
+                                    <td>2025-07-05</td>
+                                    <td>2025-07-07</td>
+                                    <td>3 days</td>
+                                    <td>Relocating to new apartment</td>
+                                    <td class="action-cell">
+                                        <button class="btn btn-success approve-btn" data-id="3">
+                                            <i class="fas fa-check"></i> Approve
+                                        </button>
+                                        <button class="btn btn-danger reject-btn" data-id="3">
+                                            <i class="fas fa-times"></i> Reject
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            
+            <footer class="footer">
+                <p>HRMS Leave Management System &copy; 2025. All rights reserved.</p>
+                <p>Project Duration: 15 May 2025 – 15 June 2025</p>
+            </footer>
+        </div>
+    </div>
+    
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notification-text">Leave request approved successfully!</span>
+    </div>
+    
+    <script src="manager.js"></script>
+</body>
+</html>

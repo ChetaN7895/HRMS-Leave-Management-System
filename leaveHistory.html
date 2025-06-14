@@ -1,0 +1,194 @@
+<!-- Folder: /hrms-leave-system/leaveHistory.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMS - Leave History</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-calendar-alt"></i>
+                <h1>HRMS Leave</h1>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="applyLeave.html" class="nav-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Apply Leave</span>
+                </a>
+                <a href="leaveHistory.html" class="nav-item active">
+                    <i class="fas fa-history"></i>
+                    <span>Leave History</span>
+                </a>
+                <a href="approval.html" class="nav-item" id="approval-link">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Approvals</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="header">
+                <div></div> <!-- Empty div for spacing -->
+                
+                <div class="user-section">
+                    <div class="user-info">
+                        <div class="name">Chetan Solanki</div>
+                        <div class="role" id="user-role">Employee</div>
+                    </div>
+                    <div class="logout-dropdown">
+                        <div class="avatar">JS</div>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-user"></i> Profile</a>
+                            <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content">
+                <!-- Leave History Page -->
+                <section id="leave-history-page" class="page fade-in">
+                    <div class="page-title">
+                        <h2>My Leave History</h2>
+                        <a href="applyLeave.html" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Apply Leave
+                        </a>
+                    </div>
+                    
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>Past Leave Applications</h3>
+                            <div class="actions">
+                                <select id="history-filter">
+                                    <option value="all">All Status</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="approved">Approved</option>
+                                    <option value="rejected">Rejected</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Leave Type</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Duration</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leave-history-body">
+                                <tr>
+                                    <td>Vacation</td>
+                                    <td>2025-05-10</td>
+                                    <td>2025-05-15</td>
+                                    <td>5 days</td>
+                                    <td><span class="status status-approved">Approved</span></td>
+                                    <td><button class="btn btn-outline">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Medical</td>
+                                    <td>2025-04-22</td>
+                                    <td>2025-04-23</td>
+                                    <td>2 days</td>
+                                    <td><span class="status status-approved">Approved</span></td>
+                                    <td><button class="btn btn-outline">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Casual</td>
+                                    <td>2025-06-10</td>
+                                    <td>2025-06-12</td>
+                                    <td>3 days</td>
+                                    <td><span class="status status-pending">Pending</span></td>
+                                    <td><button class="btn btn-outline">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Personal</td>
+                                    <td>2025-03-15</td>
+                                    <td>2025-03-15</td>
+                                    <td>1 day</td>
+                                    <td><span class="status status-rejected">Rejected</span></td>
+                                    <td><button class="btn btn-outline">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Maternity</td>
+                                    <td>2025-02-01</td>
+                                    <td>2025-05-01</td>
+                                    <td>90 days</td>
+                                    <td><span class="status status-approved">Approved</span></td>
+                                    <td><button class="btn btn-outline">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Sick</td>
+                                    <td>2025-01-10</td>
+                                    <td>2025-01-12</td>
+                                    <td>3 days</td>
+                                    <td><span class="status status-approved">Approved</span></td>
+                                    <td><button class="btn btn-outline">View</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="pagination">
+                        <button class="btn btn-outline"><i class="fas fa-chevron-left"></i> Previous</button>
+                        <span>Page 1 of 3</span>
+                        <button class="btn btn-outline">Next <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </section>
+            </div>
+            
+            <footer class="footer">
+                <p>HRMS Leave Management System &copy; 2025. All rights reserved.</p>
+                <p>Project Duration: 15 May 2025 – 15 June 2025</p>
+            </footer>
+        </div>
+    </div>
+    
+    <script src="employee.js"></script>
+    <script>
+        // Filter functionality for leave history
+        document.getElementById('history-filter').addEventListener('change', function() {
+            const filterValue = this.value;
+            const rows = document.querySelectorAll('#leave-history-body tr');
+            
+            rows.forEach(row => {
+                const status = row.querySelector('.status').classList[1];
+                const statusType = status.split('-')[1];
+                
+                if (filterValue === 'all' || statusType === filterValue) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+        
+        // Initialize logout dropdown
+        const logoutDropdown = document.querySelector('.logout-dropdown');
+        if (logoutDropdown) {
+            logoutDropdown.addEventListener('mouseenter', function() {
+                this.querySelector('.dropdown-content').style.display = 'block';
+            });
+            
+            logoutDropdown.addEventListener('mouseleave', function() {
+                this.querySelector('.dropdown-content').style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>

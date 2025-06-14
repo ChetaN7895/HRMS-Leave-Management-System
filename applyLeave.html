@@ -1,0 +1,128 @@
+<!-- Folder: /hrms-leave-system/applyLeave.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMS - Apply Leave</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-calendar-alt"></i>
+                <h1>HRMS Leave</h1>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="applyLeave.html" class="nav-item active">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Apply Leave</span>
+                </a>
+                <a href="leaveHistory.html" class="nav-item">
+                    <i class="fas fa-history"></i>
+                    <span>Leave History</span>
+                </a>
+                <a href="approval.html" class="nav-item" id="approval-link">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Approvals</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="header">
+                <div></div> <!-- Empty div for spacing -->
+                
+                <div class="user-section">
+                    <div class="user-info">
+                        <div class="name">Chetan Solanki</div>
+                        <div class="role" id="user-role">Employee</div>
+                    </div>
+                    <div class="logout-dropdown">
+                        <div class="avatar">JS</div>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-user"></i> Profile</a>
+                            <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content">
+                <!-- Apply Leave Page -->
+                <section id="apply-leave-page" class="page fade-in">
+                    <div class="page-title">
+                        <h2>Apply for Leave</h2>
+                        <a href="index.html" class="btn btn-outline">
+                            <i class="fas fa-arrow-left"></i> Back to Dashboard
+                        </a>
+                    </div>
+                    
+                    <div class="form-container">
+                        <form id="leave-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="leave-type">Leave Type</label>
+                                    <select id="leave-type" required>
+                                        <option value="">Select Leave Type</option>
+                                        <option value="casual">Casual Leave</option>
+                                        <option value="sick">Sick Leave</option>
+                                        <option value="vacation">Vacation</option>
+                                        <option value="personal">Personal Leave</option>
+                                        <option value="maternity">Maternity Leave</option>
+                                        <option value="paternity">Paternity Leave</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="duration">Duration (Days)</label>
+                                    <input type="number" id="duration" min="0.5" max="30" step="0.5" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="from-date">From Date</label>
+                                    <input type="date" id="from-date" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="to-date">To Date</label>
+                                    <input type="date" id="to-date" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="reason">Reason</label>
+                                <textarea id="reason" placeholder="Briefly explain the reason for your leave..." required></textarea>
+                            </div>
+                            
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i> Submit Application
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+            
+            <footer class="footer">
+                <p>HRMS Leave Management System &copy; 2025. All rights reserved.</p>
+                <p>Project Duration: 15 May 2025 – 15 June 2025</p>
+            </footer>
+        </div>
+    </div>
+    
+    <script src="employee.js"></script>
+</body>
+</html>
