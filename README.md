@@ -71,14 +71,10 @@ The HRMS Leave Management System is a web application that allows employees to a
 
 ## Screenshots
 
-![Dashboard](screenshot-dashboard.png)
-*Dashboard with leave statistics and recent requests*
+![Image](https://github.com/user-attachments/assets/05a9634e-198c-436d-b788-79f760642765)
+![Image](https://github.com/user-attachments/assets/9ce6f6f1-038f-461b-afbf-8e9cc7286d73)
 
-![Leave Application](screenshot-apply.png)
-*Leave application form with validation*
-
-![Approval Page](screenshot-approval.png)
-*Manager approval interface with action buttons*
+![Image](https://github.com/user-attachments/assets/595f42ef-131f-40ec-99ea-74975346f236)
 
 ## Learning Outcomes
 - Developed a complete HR management system
